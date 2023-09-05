@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Bài Tập 1: QUẢN LÝ TUYỂN SINH</h3>
+      <div class="form-group">
+        <label for="">Điểm Chuẩn</label>
+        <input
+          type="text"
+          name="diemChuan"
+          id="diemChuan"
+          class="form-control"
+          placeholder="Xin nhập điểm chuẩn trường"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Chọn Khu Vực</label>
+        <select class="form-control form-control-sm" name="khuVuc" id="khuVuc">
+          <option>X (Nếu bạn không thuộc khu vực ưu tiên)</option>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="">Chọn Đối Tượng</label>
+        <select
+          class="form-control form-control-sm"
+          name="doiTuong"
+          id="doiTuong"
+        >
+          <option>0 (Nếu bạn không thuộc đối tượng ưu tiên)</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+      <form id="form">
+        <p>Nhập Điểm 3 Môn Thi Đạt Được</p>
+        <label for="mon1">Điểm môn 1:</label>
+        <input
+          type="number"
+          id="mon1"
+          name="mon1"
+          placeholder="nhập điểm vào"
+        /><br />
+        <label for="mon2">Điểm môn 2:</label>
+        <input
+          type="number"
+          id="mon2"
+          name="mon2"
+          placeholder="nhập điểm vào"
+        /><br />
+        <label for="mon3">Điểm môn 3:</label>
+        <input
+          type="number"
+          id="mon3"
+          name="mon3"
+          placeholder="nhập điểm vào"
+        /><br />
+      </form>
+      <br />
+      <button class="btn btn-danger" onclick="kiemTra()">Kết Quả</button>
+      <br />
+      <br />
+      <div id="result"></div>
+      <br /><br /><br />
+      <h3>Bài Tập 2: TÍNH TIỀN ĐIỆN</h3>
+      <table style="border: solid 1px; border-collapse: collapse; width: 500px">
+        <tr style="border: solid 1px; text-align: left; padding: 8px">
+          <th style="background-color: #4caf50; color: white">Số lượng</th>
+          <th style="background-color: #4caf50; color: white">Giá tiền</th>
+        </tr>
+        <tr>
+          <td>50kw đầu</td>
+          <td>500đ/kw</td>
+        </tr>
+        <tr>
+          <td>50 kw kế tiếp</td>
+          <td>650đ/kw</td>
+        </tr>
+        <tr>
+          <td>100kw kế</td>
+          <td>850đ/kw</td>
+        </tr>
+        <tr>
+          <td>150kw kế toán</td>
+          <td>1100đ/kw</td>
+        </tr>
+        <tr>
+          <td>còn lại</td>
+          <td>1300đ/kw</td>
+        </tr>
+      </table>
+      <br />
+      <div class="form-group">
+        <label for="">Nhập Tên Khách Hàng</label>
+        <input
+          type="text"
+          name="tenKh"
+          id="tenKh"
+          class="form-control"
+          placeholder="Nhập họ và tên"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Nhập Số Điện Bạn Sử Dụng</label>
+        <input
+          type="text"
+          name="soKw"
+          id="soKw"
+          class="form-control"
+          placeholder="Nhập Số KW"
+          aria-describedby="helpId"
+        />
+      </div>
+      <button class="btn btn-danger" onclick="tinhTien()">Tính Tiền</button>
+      <br /><br />
+      <div id="result2"></div>
+      <br /><br /><br />
+      <h3>Bài Tập 3: TÍNH THUẾ THU NHẬP CÁ NHÂN</h3>
+      <table style="border: solid 1px; border-collapse: collapse; width: 500px">
+        <tr style="border: solid 1px; text-align: left; padding: 8px">
+          <th style="background-color: yellow; color: black">
+            Thu Nhập Chịu Thuế (Triệu)
+          </th>
+          <th style="background-color: yellow; color: black">Thuế Suất (%)</th>
+        </tr>
+        <tr>
+          <td>Đến 60:</td>
+          <td>5%</td>
+        </tr>
+        <tr>
+          <td>Trên 60 đến 120:</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Trên 120 đến 210:</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td>Trên 210 đến 384:</td>
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td>Trên 384 đến 624:</td>
+          <td>25%</td>
+        </tr>
+        <tr>
+          <td>Trên 624 đến 960:</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+          <td>Trên 960:</td>
+          <td>35%</td>
+        </tr>
+      </table>
+      <div class="form-group">
+        <label for="nameKh">Họ và tên</label>
+        <input
+          type="text"
+          name="nameKh"
+          id="nameKh"
+          class="form-control"
+          placeholder="Nhập họ và tên"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group">
+        <label for="totalMoney">Tổng Thu Nhập Năm (Triệu VNĐ)</label>
+        <input
+          type="number"
+          name="totalMoney"
+          id="totalMoney"
+          class="form-control"
+          placeholder="Nhập tổng thu nhập"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group">
+        <label for="dependents">Số Người Phụ Thuộc</label>
+        <input
+          type="number"
+          name="dependents"
+          id="dependents"
+          class="form-control"
+          placeholder="Nhập số người phụ thuộc"
+          aria-describedby="helpId"
+        />
+      </div>
+      <button class="btn btn-danger" onclick="tinhThue()">Tính Thuế</button>
+      <br /><br />
+      <div id="result3"></div>
+      <br /><br /><br />
+      <h3>Bài Tập 4: TÍNH TIỀN CÁP</h3>
+      <div class="form-group">
+        <label for="">Chọn Loại Khách Hàng</label>
+        <select
+          class="form-control form-control-sm"
+          name="customerType"
+          id="customerType"
+        >
+          <option value="doanhNghiep">Doanh nghiệp</option>
+          <option value="nhaDan">Nhà dân</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="">Mã Số Khách Hàng</label>
+        <input
+          type="text"
+          name="customerID"
+          id="customerID"
+          class="form-control"
+          placeholder="Nhập mã khách hàng"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group" id="connectionsDiv">
+        <label for="">Số Kết Nối</label>
+        <input
+          type="number"
+          name="connections"
+          id="connections"
+          class="form-control"
+          placeholder="Nhập số kết nối muốn đăng ký"
+          aria-describedby="helpId"
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Số Kênh Cao Cấp</label>
+        <input
+          type="number"
+          name="premiumChannels"
+          id="premiumChannels"
+          class="form-control"
+          placeholder="Nhập số kênh muốn đăng ký"
+          aria-describedby="helpId"
+        />
+      </div>
+      <button class="btn btn-danger" onclick="thanhToan()">Thanh Toán</button>
+      <div id="result4"></div>
+      <br /><br /><br />
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/index.js"></script>
+  </body>
+</html>
